@@ -1,0 +1,64 @@
+{% extends "bootstrap/base.html" %} {% block title %} {{ TITLE }} {% endblock %}
+{% block styles %} {{ super() }}
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+{% endblock %} {% block content %}
+<h1><span>Web Interface </span>for Backend Deep-Net Object Detection</h1>
+
+<div id="flex-container">
+<div id="container">
+  <img id="videoElement" src="{{ url_for('video_feed') }}" />
+</div>
+<form id="control">
+  <div class="settingItem">
+    <span class="settingName">Camera preview:</span>
+    <div class="settingBtn">
+      <a id="cam-preview"><button class="btn btn-default">On/Off</button></a>
+    </div>
+    
+  </div>
+ <div class="settingItem">
+  Flip horizontal:
+  <a id="flip-horizontal"><button class="btn btn-default">On/Off</button></a>
+ </div>
+ <div class="settingItem">
+ Run model:
+ <a id="use-model"><button class="btn btn-default">On/Off</button></a>
+
+</div>
+ <div class="settingItem">
+  Exposure:
+  <div class="optionContainer">
+    <a id="exposure-down"><button class="btn btn-default">-1</button></a>
+    <a id="exposure-up"><button class="btn btn-default">+1</button></a>
+  </div>
+  
+ </div>
+
+ <div class="settingItem">
+  Contrast:
+  <div class="optionContainer">
+    <a id="contrast-down"><button class="btn btn-default">-4</button></a>
+    <a id="contrast-up"><button class="btn btn-default">+4</button></a>
+  </div>
+ </div>
+
+ <div class="settingItem">
+  <a id="reset-cam"><button class="btn btn-default">Reset camera</button></a>
+ </div>
+
+</form>
+</div>
+<img id="logo" src="{{ url_for('static', filename='nvidia-logo.png') }}" alt="">
+{% endblock %} {% block scripts %}
+<!-- Imports -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Scripts -->
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+{{ super() }} {% endblock %}
