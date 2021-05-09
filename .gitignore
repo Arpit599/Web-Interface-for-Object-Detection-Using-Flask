@@ -10,9 +10,14 @@ __pycache__/
 .vscode/
 
 ### Virtual Environment ###
-env/
+venv/
 
 ### Metadata ###
 camera_settings.log
 
 *.weights
+
+### Ignore the models ###
+models/*
+
+_source/
