@@ -14,24 +14,24 @@
   <div class="settingItem">
     <span class="settingName">Camera preview:</span>
     <div class="settingBtn">
-      <a id="cam-preview"><button class="btn btn-default">On/Off</button></a>
+      <a id="cam-preview"><button id="previewBtn" class="toggleBtn" onclick="myPreviewFun()">On</button></a>
     </div>
     
   </div>
  <div class="settingItem">
   Flip horizontal:
-  <a id="flip-horizontal"><button class="btn btn-default">On/Off</button></a>
+  <a id="flip-horizontal"><button id="flipBtn" class="toggleBtn btn-inactive" onclick="myFlipFun()">Off</button></a>
  </div>
  <div class="settingItem">
  Run model:
- <a id="use-model"><button class="btn btn-default">On/Off</button></a>
+ <a id="use-model"><button id="modelBtn" class="toggleBtn btn-inactive" onclick="myRunModelFun()">Off</button></a>
 
 </div>
  <div class="settingItem">
   Exposure:
   <div class="optionContainer">
-    <a id="exposure-down"><button class="btn btn-default">-1</button></a>
-    <a id="exposure-up"><button class="btn btn-default">+1</button></a>
+    <a id="exposure-down"><button class="normalBtn">-1</button></a>
+    <a id="exposure-up"><button class="normalBtn">+1</button></a>
   </div>
   
  </div>
@@ -39,13 +39,13 @@
  <div class="settingItem">
   Contrast:
   <div class="optionContainer">
-    <a id="contrast-down"><button class="btn btn-default">-4</button></a>
-    <a id="contrast-up"><button class="btn btn-default">+4</button></a>
+    <a id="contrast-down"><button class="normalBtn">-4</button></a>
+    <a id="contrast-up"><button class="normalBtn">+4</button></a>
   </div>
  </div>
 
  <div class="settingItem">
-  <a id="reset-cam"><button class="btn btn-default">Reset camera</button></a>
+  <a id="reset-cam"><button id="resetBtn">Reset camera</button></a>
  </div>
 
 </form>
@@ -60,5 +60,7 @@
   type="text/javascript"
   src="{{ url_for('static', filename='script.js') }}"
 ></script>
+
+<script type="text/javascript" src="../static/btnFunc.js"></script>
 
 {{ super() }} {% endblock %}

@@ -1,4 +1,38 @@
 // Functions to deal with button events
+function myPreviewFun() {
+  // console.log("Inside function", previewButton);
+    let previewButton = document.getElementById("previewBtn");
+    previewButton.classList.toggle("btn-inactive");
+
+    if(previewButton.textContent === "On"){
+      previewButton.textContent = "Off";
+    } else{
+      previewButton.textContent = "On";
+    }
+}
+
+function myFlipFun() {
+    let flipButton = document.getElementById("flipBtn");
+    flipButton.classList.toggle("btn-inactive");
+
+    if(flipButton.textContent === "On"){
+      flipButton.textContent = "Off";
+    } else{
+      flipButton.textContent = "On";
+    }
+}
+
+function myRunModelFun() {
+    let modelButton = document.getElementById("modelBtn");
+    modelButton.classList.toggle("btn-inactive");
+
+    if(modelButton.textContent === "On"){
+      modelButton.textContent = "Off";
+    } else{
+      modelButton.textContent = "On";
+    }
+}
+
 $(function () {
   // Preview switch
   $("a#cam-preview").bind("click", function () {

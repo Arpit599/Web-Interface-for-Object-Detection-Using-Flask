@@ -98,10 +98,71 @@ body {
     left: 1rem;
 }
 
-.btn-default{
+.newBtn:hover, .newBtn:active{
+    background-color: #56ab2f;
+    border: none;
+    outline: none;
+    color:white;
+}
+
+.normalBtn{
     background-color: #56ab2f;
     font-weight: bold;
     color:white;
     border: none;
     outline: none;
+    padding: 5px 10px;
+    border-radius: 15%;
+    font-size: 1.5rem;
+}
+
+.normalBtn:active{
+    background-color: #387c18;
+    font-weight: bold;
+    color:white;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 15%;
+    font-size: 1.5rem;
+}
+
+.toggleBtn{
+    padding: 2.5px 25px;
+    border-radius: 0.5rem;
+    background-color: #56ab2f;
+    font-weight: bold;
+    color:white;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    box-sizing: content-box;
+    width: 25px;
+}
+
+.btn-inactive{
+    background-color: red;
+    color:white;
+}
+
+#resetBtn{
+    padding: 2.5px 10px;
+    border-radius: 0.5rem;
+    background-color: #56ab2f;
+    font-weight: bold;
+    color:white;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+#resetBtn:active{
+    padding: 2.5px 10px;
+    border-radius: 0.5rem;
+    background-color: #387c18;
+    font-weight: bold;
+    color:white;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
 }

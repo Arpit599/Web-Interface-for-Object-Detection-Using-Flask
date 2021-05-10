@@ -15,7 +15,6 @@ VIDEO = VideoStreaming()
 
 @application.route('/')
 def home():
-    # TITLE = 'Web Interface for Backend Deep-Net Object Detection'
     return render_template('index.html')
 
 
@@ -76,9 +75,14 @@ def request_contrast_up():
 @application.route('/reset_camera')
 def reset_camera():
     STATUS = reset_settings()
+    VIDEO.contrast = 0.0
+    VIDEO.exposure = 156.0
     print('*'*10, STATUS)
     return "nothing"
 
 
+# if __name__ == '__main__':
+#     application.run(debug=True)
+
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(host ='0.0.0.0', port = 5001, debug=False)

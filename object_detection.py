@@ -135,11 +135,11 @@ class VideoStreaming(object):
                         int(self.VIDEO.get(cv2.CAP_PROP_FRAME_HEIGHT)),
                         int(self.VIDEO.get(cv2.CAP_PROP_FRAME_WIDTH))
                     ), np.uint8)
-                    label = 'camera disabled'
+                    label = 'Enable Camera to Detect'
                     H, W = snap.shape
                     font = cv2.FONT_HERSHEY_PLAIN
                     color = (255,255,255)
-                    cv2.putText(snap, label, (W//2 - 100, H//2), font, 2, color, 2)
+                    cv2.putText(snap, label, (W//2 - 200, H//2), font, 2, color, 2)
                 
                 frame = cv2.imencode('.jpg', snap)[1].tobytes()
                 yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
