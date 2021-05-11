@@ -2,7 +2,7 @@
 
 Web application for _real-time_ object detection on video streaming via web browser.
 
-![layout](_source/layout.jpg)
+![layout](demoImages/interfaceDemo.png)
 
 ## Installation
 
