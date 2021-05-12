@@ -10,14 +10,14 @@ Create and activate an virtual environment, as follows:
 
 ```bash
 $ cd cloned/directory/
-$ python -m venv env
-$ env/Scripts/activate
+$ python3 -m venv env
+$ source env/bin/activate
 ```
 
 After have installed and activated the environment, install all the dependencies:
 
 ```bash
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 After that, you can run the _following command_ and access the application at [127.0.0.1:5000](http://127.0.0.1:5000/) on your browser.
