@@ -4,7 +4,16 @@ Web application for _real-time_ object detection on video streaming via web brow
 
 ![layout](demoImages/interfaceDemo.png)
 
-## Installation
+## Download model
+
+To download the `yolov3.weights`, just run:
+
+```bash
+$ cd models/
+$ python dl-weights.py
+```
+
+## To run application (without using Docker)
 
 Create and activate an virtual environment, as follows:
 
@@ -26,16 +35,43 @@ After that, you can run the _following command_ and access the application at [1
 $ python application.py
 ```
 
-*obs.: This application was tested only on *Google Chrome*.*
+## To run application (using Docker)
 
-## Download model
+#### Make sure you have [Docker engine](https://docs.docker.com/engine/install/) installed on your system before proceeding.
 
-To download the `yolov3.weights`, just run:
+Go to project directory:
 
 ```bash
-$ cd models/
-$ python dl-weights.py
+$ cd cloned/directory/
 ```
+
+In the project directory, build Docker image using `Dockerfile` of the project:
+
+```bash
+$ docker build -t web_app:latest .
+```
+
+After successful build of Docker image, you now can create and run a Docker container of the image:
+
+```bash
+$ docker run --privileged -p 5001:5001 web_app
+```
+
+### Now you should be able to access the application at [0.0.0.0:5001](http://0.0.0.1:5001/) port from your browser
+
+To stop the application, first get `CONTAINER_ID` of the running Docker container:
+
+```bash
+$ docker ps
+```
+
+After getting the `CONTAINER_ID`, use the following command to stop the container:
+
+```bash
+$ docker stop <CONTAINER_ID>
+```
+
+*obs.: This application was tested only on *Google Chrome*.*
 
 ## Usage
 
