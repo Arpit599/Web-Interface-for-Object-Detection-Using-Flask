@@ -37,7 +37,7 @@ $ python application.py
 
 ## To run application (using Docker)
 
-#### Make sure you have [Docker engine](https://docs.docker.com/engine/install/) installed on your system before proceeding.
+Make sure you have [Docker engine](https://docs.docker.com/engine/install/) installed on your system before proceeding.
 
 Go to project directory:
 
@@ -57,7 +57,7 @@ After successful build of Docker image, you now can create and run a Docker cont
 $ docker run --privileged -p 5001:5001 web_app
 ```
 
-### Now you should be able to access the application at [0.0.0.0:5001](http://0.0.0.1:5001/) port from your browser
+Now you should be able to access the application at [0.0.0.0:5001](http://0.0.0.1:5001/) port from your browser
 
 To stop the application, first get `CONTAINER_ID` of the running Docker container:
 
